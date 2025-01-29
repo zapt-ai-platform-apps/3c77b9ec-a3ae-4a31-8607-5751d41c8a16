@@ -1,25 +1,31 @@
 {
-    "name": "reactjs-vite-tailwind-vercel",
-    "version": "1.0.0",
-    "description": "ReactJS app with Vite, Tailwind",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "serve": "vite preview",
-        "start": "vite --host"
-    },
-    "dependencies": {
-        "@sentry/browser": "^8.41.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
-    },
-    "devDependencies": {
-        "@vitejs/plugin-react": "^4.3.4",
-        "autoprefixer": "^10.4.20",
-        "postcss": "^8.4.47",
-        "tailwindcss": "^3.4.13",
-        "vite": "^5.4.7",
-        "@sentry/vite-plugin": "^2.23.0"
-    }
+  "name": "cactus-media",
+  "version": "1.0.0",
+  "description": "High-end creative agency website",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "start": "vite --host"
+  },
+  "dependencies": {
+    "@sentry/browser": "^8.41.0",
+    "framer-motion": "^10.16.0",
+    "gsap": "^3.12.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.22.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.16",
+    "@types/react-dom": "^19.0.9",
+    "@vitejs/plugin-react": "^5.0.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.4.2",
+    "vite": "^6.0.11",
+    "@sentry/vite-plugin": "^2.23.0"
+  }
 }
