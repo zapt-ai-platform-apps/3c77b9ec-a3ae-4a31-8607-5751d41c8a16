@@ -4,7 +4,15 @@ import { sentryVitePlugin } from "@sentry/vite-plugin";
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      babel: {
+        plugins: [
+          ['@babel/plugin-transform-react-jsx', {
+            runtime: 'automatic',
+          }],
+        ],
+      },
+    }),
     sentryVitePlugin({
       org: "zapt-apps",
       project: process.env.VITE_PUBLIC_APP_ID,
@@ -13,13 +21,18 @@ export default defineConfig({
   ],
   build: {
     target: 'esnext',
-    polyfillDynamicImport: false,
     sourcemap: true
   },
   resolve: {
-    conditions: ['development', 'browser'],
+    alias: {
+      '@': '/src'
+    }
   },
   optimizeDeps: {
     exclude: ['drizzle-orm']
+  },
+  server: {
+    host: true,
+    port: 3000
   }
 });
